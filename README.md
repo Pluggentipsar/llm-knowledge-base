@@ -213,17 +213,46 @@ Skillen `/capture` hanterar innehåll från olika plattformar med minimal frikti
 → Hämtar artikeln, sammanfattar, taggar med din kommentar
 ```
 
-### Integration med MCP-server (valfritt)
+### Integration med Mitt Digitala Minne (valfritt, rekommenderat)
 
-Om du har en extern capture-tjänst (t.ex. en MCP-server kopplad till Supabase) kan du sätta upp automatisk synk. Tagga items med ett projektspecifikt tag, och schemalägg en daglig synk:
+[Mitt Digitala Minne](https://github.com/Pluggentipsar/mittdigitalaminne) är ett kompletterande projekt - en personlig kunskapshanteringsapp med MCP-integration för Claude AI. Det ger dig:
+
+- **Webb-UI** (Vercel) - spara saker från vilken enhet som helst via webbläsaren
+- **MCP-server** - Claude kan söka och spara direkt via MCP-protokollet
+- **Stöd för YouTube, LinkedIn, Instagram** - auto-detekterar och hämtar metadata
+- **Supabase-backend** - snabb fulltext-sökning, taggar, projekt
+
+#### Workflow med automatisk synk
 
 ```
-Dag 1: Du hittar en artikel → sparar i din capture-tjänst med tag "mitt-projekt"
-Dag 2: Schemalagd synk hämtar nya items → sparar till raw/inbox/
-       /wiki kompilerar nytt material → integreras i kunskapsbasen
+Du scrollar LinkedIn → ser något relevant
+    ↓
+Sparar i Mitt Digitala Minne (webb-UI eller MCP)
+Taggar med ditt projektnamn, t.ex. "mitt-projekt"
+    ↓
+Schemalagd synk i Claude Code (dagligen)
+Hämtar nya items med rätt tagg → raw/inbox/
+    ↓
+/wiki kompilerar → integreras i kunskapsbasen
 ```
 
-Detta kan konfigureras som en schemalagd uppgift i Claude Code med `mcp__scheduled-tasks__create_scheduled_task`.
+#### Sätta upp synken
+
+1. Installera och konfigurera [Mitt Digitala Minne](https://github.com/Pluggentipsar/mittdigitalaminne)
+2. Koppla MCP-servern till Claude (stdio eller HTTP via Cloudflare Workers)
+3. Bestäm en tagg för ditt projekt (t.ex. `mitt-projekt`)
+4. Skapa en schemalagd uppgift i Claude Code:
+
+```
+Sök i mittdigitalaminne efter items taggade "mitt-projekt"
+→ Hämta nya items sedan senaste synk
+→ Skriv till raw/inbox/ med metadata
+→ Logga i wiki/log.md
+```
+
+#### Utan Mitt Digitala Minne
+
+Fungerar också utan - då använder du `/capture` direkt i Claude Code, eller Obsidian Web Clipper i webbläsaren.
 
 ---
 
