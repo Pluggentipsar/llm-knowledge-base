@@ -1,0 +1,16 @@
+{
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "defaultViewMode": "preview",
+  "foldHeading": true,
+  "foldIndent": true,
+  "showFrontmatter": false,
+  "readableLineLength": true,
+  "tabSize": 2,
+  "attachmentFolderPath": "raw/bilder",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "wiki/begrepp"
+}

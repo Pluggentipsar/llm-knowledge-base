@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "path": "Dashboard.md",
+      "title": "Dashboard"
+    },
+    {
+      "type": "file",
+      "path": "wiki/INDEX.md",
+      "title": "Wiki Index"
+    },
+    {
+      "type": "file",
+      "path": "CLAUDE.md",
+      "title": "Projektregler"
+    }
+  ]
+}

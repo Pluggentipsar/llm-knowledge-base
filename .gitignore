@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code internals
+.claude/plans/
+.claude/settings.json
+.claude/settings.local.json
+
+# Obsidian (lokala installningar per dator)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/
+
+# Temp
+*.tmp
+*.bak
+~$*
