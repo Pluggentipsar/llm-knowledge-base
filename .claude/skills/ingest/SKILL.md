@@ -8,7 +8,23 @@ user_invocable: true
 
 Du konverterar dokument till markdown och laggar in dem i kunskapsbasen.
 
-## Instruktioner
+## Lage: specifik fil vs. alla filer
+
+- **Med argument** (t.ex. `/ingest rapport.pdf`): konvertera bara den filen.
+- **Utan argument eller med `alla`**: kör batch-lage (se nedan).
+
+### Batch-lage (`/ingest` eller `/ingest alla`)
+
+1. **Skanna** alla filer i `raw/` rekursivt med filtillagen: `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.html`, `.htm`
+2. **Las** `wiki/log.md` och extrahera alla filnamn som redan forkommit i en `[INGEST]`-rad
+3. **Filtrera** bort redan ingestade filer — bearbeta bara nya
+4. **Rapportera** vilka filer som hittades, vilka som skippas (redan ingestade) och vilka som processas
+5. Fortsatt med vanliga instruktioner nedan for varje ny fil
+6. **Avsluta** med en summering: X filer ingestade, Y skippade
+
+---
+
+## Instruktioner (per fil)
 
 1. **Konvertera** med markitdown:
 
