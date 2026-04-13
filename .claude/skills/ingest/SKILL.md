@@ -33,7 +33,7 @@ export PATH="$PATH:$APPDATA/Python/Python314/Scripts:$APPDATA/Python/Python3*/Sc
 markitdown "{filsokvag}" -o "{output_sokvag}"
 ```
 
-2. **Bestam ratt mapp:**
+2. **Bestam ratt mapp for .md-filen:**
 
 | Typ | Mapp |
 |-----|------|
@@ -42,7 +42,15 @@ markitdown "{filsokvag}" -o "{output_sokvag}"
 | Artikel/blogginlagg | `raw/artiklar/` |
 | Presentation/ovrigt | `raw/inspiration/` |
 
-3. **Lagg till metadata** overst:
+3. **Flytta originalfilen** till `raw/originals/` (skapa mappen om den inte finns):
+
+```bash
+mv "{original_filsokvag}" "raw/originals/{filnamn}"
+```
+
+Detta gor att filer i `raw/originals/` ar konverterade, medan filer kvar i `raw/` annu inte bearbetats.
+
+4. **Lagg till metadata** overst:
 
 ```markdown
 ---
