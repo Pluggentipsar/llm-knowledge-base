@@ -12,6 +12,10 @@ Du underhaller kunskapsbasen i `wiki/`.
 
 ### `/wiki kompilera` (eller utan argument)
 
+Stodjer flaggor:
+- `/wiki kompilera --citat 5` — andrar antal citat per kalla (standard: 2-3)
+- `/wiki kompilera --inga-citat` — stanger av citat helt for denna korning
+
 1. **Las** alla filer i `raw/` (alla undermappar)
 2. **Identifiera** amnen, begrepp, personer och fynd
 3. **Skapa/uppdatera** wiki-artiklar:
@@ -26,7 +30,14 @@ Du underhaller kunskapsbasen i `wiki/`.
 ...
 
 ## Nyckelinsikter
-- ...
+
+- [Insikt som parafras eller syntes]
+  > "Exakt originaltext som belagger insikten."
+  > — *[Kallnamn], [raw/fil.md]*
+
+- [Nasta insikt]
+  > "Another supporting quote."
+  > — *[Kallnamn], [raw/fil.md]*
 
 ## Kopplingar
 - Relaterat: [[annat-amne]]
@@ -37,6 +48,14 @@ Du underhaller kunskapsbasen i `wiki/`.
 ---
 *Senast uppdaterad: {datum}*
 ```
+
+**Regler for citat:**
+- Om `--inga-citat` angavs: utelam citat helt, skriv bara insikterna som punkter
+- Annars: lyft 2-3 citat per kalla som standard, eller det antal som angavs med `--citat N`
+- Bara for de viktigaste insikterna (faktapastaenden, karnargument, exakta formuleringar med hog informationstathet)
+- Svenska/engelska kallor: citera i originalsprak
+- Ovriga sprak: oversatt till engelska, ange kallsprak: `[finska, oversatt]`
+- Citaten ska vara exakta — ingen parafrasering inuti citattecken
 
 4. **Uppdatera INDEX.md** med nya artiklar
 5. **Logga** i `wiki/log.md`: `[DATUM] [COMPILE] Kompilerat X nya artiklar fran raw/`
