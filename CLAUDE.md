@@ -1,16 +1,18 @@
-# Kunskapsbas: [DITT PROJEKT]
+# Kunskapsbas: [Information environment]
 
 ## Om projektet
 
 <!-- Fyll i en kort beskrivning av ditt projekt -->
-Beskriv ditt projekt har. Vad handlar det om? Vad ar syftet?
+Projektet handlar om *The information environment*, eller *informationsmiljön* på svenska. Utgår från NATOs terminologi i AJP-10.1 om *The information environment* och de dimensioner som beskrivs där. AJP-10.1 kommer läsas in initialt för att skapa en grund.
 
-## Amnesomraden
+Källor kommer främst vara på engelska eller svenska, engelska används för att inte tappa innebörden av koncept och referens till den engelska litteraturen.
+
+## Ämnesområden
 
 <!-- Lista de amnen och teman som ar centrala for ditt projekt -->
-1. **Amne 1** - Kort beskrivning
-2. **Amne 2** - Kort beskrivning
-3. **Amne 3** - Kort beskrivning
+1.  **The information environment** - informationsmiljö och koncept kring det
+2. **Hybrid warfare** - hybrik krigföring och koncept kring det
+3. *information flows* - informationsflöden och koncept kring det
 
 ## Mappstruktur
 
@@ -35,7 +37,7 @@ outputs/       # Genererade analyser och material
 ## Wiki-regler
 
 - Varje amne far en egen .md-fil
-- Varje wiki-fil borjar med en sammanfattning (1-2 stycken)
+- Varje wiki-fil borjar med en sammanfattning (1-4 stycken)
 - Relaterade amnen lankas med `[[amnesnamn]]`
 - INDEX.md listar alla artiklar med en enrads-beskrivning
 - Nar nytt raw-material laggs till, uppdateras relevant wiki-artikel
@@ -57,7 +59,7 @@ DIVA Portal:       https://diva-portal.org/smash/export.jsf?format=csv&searchTyp
 ## Soktermer
 
 <!-- Lagg till soktermer relevanta for ditt projekt, pa bade svenska och engelska -->
-- "term 1", "term 2", "term 3"
+- "The information environment", "NATO AJP-10.1", "Hybrid warfare"
 
 ## Verktyg
 
